@@ -7,7 +7,7 @@ import com.pxp.employeedatabase.entity.EmployeeEntity;
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Integer> {
 
-	public boolean existbyfirstNameAndLastName(String firstName,String lastName);
-	public boolean existbyId(int id);
+	Boolean existsByFirstNameAndLastName(String firstName, String lastName);
+	Boolean existsById(int id);
 	
 }

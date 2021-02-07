@@ -33,7 +33,7 @@ public class EmployeeService {
  
  public String addEmployee(EmployeeEntity employee) {
 	 try {
-		 if(!employeeRepository.existbyfirstNameAndLastName(employee.getFirstName(), employee.getLastName())) {
+		 if(!employeeRepository.existsByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())) {
 			 employeeRepository.save(employee);
 			 return "employee added succesfully";
 		 }
@@ -47,7 +47,7 @@ public class EmployeeService {
  }
 	 public String removeEmployee(EmployeeEntity employee) {
 		 try {
-			 if(employeeRepository.existbyfirstNameAndLastName(employee.getFirstName(), employee.getLastName())) {
+			 if(employeeRepository.existsByFirstNameAndLastName(employee.getFirstName(), employee.getLastName())) {
 				 employeeRepository.delete(employee);
 				 return "Employee Delete";
 			 }

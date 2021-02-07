@@ -23,14 +23,17 @@ public class EmployeeController {
 	public List<Employee> getAllEmployees(){
 		return employeeService.getAllEmployees();
 	}
+
 	@RequestMapping(value = "addemployee",method =RequestMethod.POST)
 	public String addEmployee(@RequestBody EmployeeEntity employee ) {
 		return employeeService.addEmployee(employee);
 	}
+
 	@RequestMapping(value = "updateemployee",method =RequestMethod.PUT)
 	public String updateEmployee(@RequestBody EmployeeEntity employee) {
 		return employeeService.updateEmployee(employee);
 	}
+
 	@RequestMapping(value = "deleteemployee",method =RequestMethod.DELETE)
 	public String deleteEmployee(@RequestBody EmployeeEntity employee) {
 		return employeeService.removeEmployee(employee);
