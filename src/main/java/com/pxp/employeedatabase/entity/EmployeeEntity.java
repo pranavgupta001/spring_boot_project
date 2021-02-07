@@ -5,18 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-
 public class EmployeeEntity {
     @Id 
     @GeneratedValue
-    
-    
 	public int id;
 	public String firstName;
 	public String lastName;
+
 	public EmployeeEntity() {
 		super();
-		}
+	}
 	
 	public int getId() {
 		return id;
